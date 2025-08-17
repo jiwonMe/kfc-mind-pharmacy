@@ -1,12 +1,12 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 121 121" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Vector" opacity="0.25">
-<path d="M72.6 0V24.2L48.4 24.2C48.4 10.8347 59.2347 -1.60659e-06 72.6 0Z" fill="var(--fill-0, white)"/>
-<path d="M72.6 0C85.9653 1.60659e-06 96.8 10.8347 96.8 24.2V48.4L72.6 48.4V0Z" fill="var(--fill-0, white)"/>
-<path d="M121 72.6L96.8 72.6L96.8 48.4C110.165 48.4 121 59.2347 121 72.6Z" fill="var(--fill-0, white)"/>
-<path d="M121 72.6C121 85.9653 110.165 96.8 96.8 96.8H72.6L72.6 72.6L121 72.6Z" fill="var(--fill-0, white)"/>
-<path d="M48.4 121L48.4 96.8H72.6C72.6 110.165 61.7653 121 48.4 121Z" fill="var(--fill-0, white)"/>
-<path d="M48.4 121C35.0347 121 24.2 110.165 24.2 96.8L24.2 72.6L48.4 72.6L48.4 121Z" fill="var(--fill-0, white)"/>
-<path d="M0 48.4H24.2L24.2 72.6C10.8347 72.6 -1.02238e-06 61.7653 0 48.4Z" fill="var(--fill-0, white)"/>
-<path d="M0 48.4C1.02238e-06 35.0347 10.8347 24.2 24.2 24.2L48.4 24.2L48.4 48.4L0 48.4Z" fill="var(--fill-0, white)"/>
+<svg width="121" height="121" viewBox="0 0 121 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.25">
+<path d="M72.6 0V24.2L48.4 24.2C48.4 10.8347 59.2347 -1.60659e-06 72.6 0Z" fill="white"/>
+<path d="M72.6 0C85.9653 1.60659e-06 96.8 10.8347 96.8 24.2V48.4L72.6 48.4V0Z" fill="white"/>
+<path d="M121 72.6L96.8 72.6L96.8 48.4C110.165 48.4 121 59.2347 121 72.6Z" fill="white"/>
+<path d="M121 72.6C121 85.9653 110.165 96.8 96.8 96.8H72.6L72.6 72.6L121 72.6Z" fill="white"/>
+<path d="M48.4 121L48.4 96.8H72.6C72.6 110.165 61.7653 121 48.4 121Z" fill="white"/>
+<path d="M48.4 121C35.0347 121 24.2 110.165 24.2 96.8L24.2 72.6L48.4 72.6L48.4 121Z" fill="white"/>
+<path d="M0 48.4H24.2L24.2 72.6C10.8347 72.6 -1.02238e-06 61.7653 0 48.4Z" fill="white"/>
+<path d="M0 48.4C1.02238e-06 35.0347 10.8347 24.2 24.2 24.2L48.4 24.2L48.4 48.4L0 48.4Z" fill="white"/>
 </g>
 </svg>
