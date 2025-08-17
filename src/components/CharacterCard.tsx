@@ -82,7 +82,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
             fontSize: '20px',
             fontWeight: 700,
             letterSpacing: '-0.4px',
-            fontFamily: '"Elice DX Neolli OTF", "Wanted Sans", sans-serif',
+            fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
             color: 'inherit',
             lineHeight: 1,
             marginBottom: '4px',
@@ -95,7 +95,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
             fontSize: '14px',
             fontWeight: 500,
             letterSpacing: '-0.42px',
-            fontFamily: '"Wanted Sans", sans-serif',
+            fontFamily: '"Wanted Sans Variable", sans-serif',
             color: selected ? 'inherit' : '#636363',
             lineHeight: 1,
           }}

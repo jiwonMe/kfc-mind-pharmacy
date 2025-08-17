@@ -54,7 +54,7 @@ const SignUpPage: React.FC = () => {
               fontWeight: 500,
               color: '#000000',
               marginBottom: '8px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             아이디
@@ -75,7 +75,7 @@ const SignUpPage: React.FC = () => {
               fontWeight: 500,
               color: '#000000',
               marginBottom: '4px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             비밀번호
@@ -85,7 +85,7 @@ const SignUpPage: React.FC = () => {
               fontSize: 14,
               color: '#898989',
               marginBottom: '8px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             알파벳과 숫자를 조합하여 8자 이상 입력해주세요
@@ -139,7 +139,7 @@ const SignUpPage: React.FC = () => {
               fontWeight: 500,
               color: '#000000',
               marginBottom: '4px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             직급
@@ -149,7 +149,7 @@ const SignUpPage: React.FC = () => {
               fontSize: 14,
               color: '#898989',
               marginBottom: '8px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             직급 정보는 통계 분석을 위한 데이터 수집을 위해서만 사용됩니다
@@ -168,7 +168,7 @@ const SignUpPage: React.FC = () => {
               '& .MuiSelect-select': {
                 padding: '18px 16px',
                 fontSize: 16,
-                fontFamily: '"Wanted Sans", sans-serif',
+                fontFamily: '"Wanted Sans Variable", sans-serif',
               },
             }}
           >
@@ -201,7 +201,7 @@ const SignUpPage: React.FC = () => {
               sx={{
                 fontSize: 14,
                 color: '#000000',
-                fontFamily: '"Wanted Sans", sans-serif',
+                fontFamily: '"Wanted Sans Variable", sans-serif',
               }}
             >
               <span>이용약관에 동의합니다 </span>

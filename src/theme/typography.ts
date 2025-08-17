@@ -1,21 +1,21 @@
 export const typography = {
-  fontFamily: '"Wanted Sans", "Noto Sans KR", sans-serif',
+  fontFamily: '"Wanted Sans Variable", "Noto Sans KR", sans-serif',
   h1: {
-    fontFamily: '"Elice DX Neolli OTF", "Wanted Sans", sans-serif',
+    fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
     fontSize: '32px',
     fontWeight: 700,
     letterSpacing: '-0.64px',
     lineHeight: 1.2,
   },
   h2: {
-    fontFamily: '"Elice DX Neolli OTF", "Wanted Sans", sans-serif',
+    fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
     fontSize: '24px',
     fontWeight: 700,
     letterSpacing: '-0.48px',
     lineHeight: 1.3,
   },
   h3: {
-    fontFamily: '"Elice DX Neolli OTF", "Wanted Sans", sans-serif',
+    fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
     fontSize: '20px',
     fontWeight: 700,
     letterSpacing: '-0.4px',

@@ -62,7 +62,7 @@ const LoginPage: React.FC = () => {
             fontSize: { xs: 18, sm: 20, md: 24 },
             fontWeight: 'bold',
             color: '#E2292D',
-            fontFamily: '"Wanted Sans", sans-serif',
+            fontFamily: '"Wanted Sans Variable", sans-serif',
             textAlign: { xs: 'center', sm: 'left' },
           }}
         >
@@ -116,7 +116,7 @@ const LoginPage: React.FC = () => {
               sx={{
                 fontSize: { xs: '13px', sm: '14px', md: '15px' },
                 color: '#000000',
-                fontFamily: '"Wanted Sans", sans-serif',
+                fontFamily: '"Wanted Sans Variable", sans-serif',
               }}
             >
               아이디 저장
@@ -152,7 +152,7 @@ const LoginPage: React.FC = () => {
             sx={{
               fontSize: { xs: '13px', sm: '14px', md: '15px' },
               color: '#898989',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
               cursor: 'pointer',
               textDecoration: 'underline',
               '&:hover': {
@@ -175,7 +175,7 @@ const LoginPage: React.FC = () => {
             sx={{
               fontSize: { xs: '13px', sm: '14px', md: '15px' },
               color: '#898989',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
               cursor: 'pointer',
               textDecoration: 'underline',
               '&:hover': {

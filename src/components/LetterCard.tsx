@@ -119,7 +119,7 @@ export const LetterCard: React.FC<LetterCardProps> = ({
             letterSpacing: '-0.48px',
             color: '#626262',
             textAlign: 'center',
-            fontFamily: '"Wanted Sans", sans-serif',
+            fontFamily: '"Wanted Sans Variable", sans-serif',
             fontWeight: 500,
           }}
         >

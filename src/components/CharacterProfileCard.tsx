@@ -36,7 +36,7 @@ const CharacterProfileCard: React.FC<CharacterProfileCardProps> = ({
           fontSize: 18,
           fontWeight: 'bold',
           color: '#000000',
-          fontFamily: '"Wanted Sans", sans-serif',
+          fontFamily: '"Wanted Sans Variable", sans-serif',
         }}
       >
         {name}
@@ -45,7 +45,7 @@ const CharacterProfileCard: React.FC<CharacterProfileCardProps> = ({
         sx={{
           fontSize: 14,
           color: '#626262',
-          fontFamily: '"Wanted Sans", sans-serif',
+          fontFamily: '"Wanted Sans Variable", sans-serif',
           marginTop: '4px',
         }}
       >

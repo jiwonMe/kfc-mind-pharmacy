@@ -62,7 +62,7 @@ const LetterPage: React.FC = () => {
             sx={{
               fontSize: 14,
               color: '#000000',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             윙키가 응원의 메시지를 보냈어요!
@@ -91,7 +91,7 @@ const LetterPage: React.FC = () => {
             marginTop: '24px',
             textDecoration: 'underline',
             cursor: 'pointer',
-            fontFamily: '"Wanted Sans", sans-serif',
+            fontFamily: '"Wanted Sans Variable", sans-serif',
           }}
         >
           지난 메시지 보기 ({messages.length - 1}개)

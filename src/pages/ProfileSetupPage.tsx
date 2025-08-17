@@ -48,7 +48,7 @@ const ProfileSetupPage: React.FC = () => {
               fontWeight: 500,
               color: '#000000',
               marginBottom: '8px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             프로필 이름
@@ -69,7 +69,7 @@ const ProfileSetupPage: React.FC = () => {
               fontWeight: 500,
               color: '#000000',
               marginBottom: '4px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             프로필 아이콘
@@ -79,7 +79,7 @@ const ProfileSetupPage: React.FC = () => {
               fontSize: 14,
               color: '#898989',
               marginBottom: '16px',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             프로필에 사용할 이미지를 선택해주세요

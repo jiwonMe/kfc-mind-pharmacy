@@ -263,7 +263,7 @@ export const components = {
   MuiDialogTitle: {
     styleOverrides: {
       root: {
-        fontFamily: '"Elice DX Neolli OTF", sans-serif',
+        fontFamily: '"Elice DX Neolli", sans-serif',
         fontSize: '20px',
         fontWeight: 700,
         letterSpacing: '-0.4px',

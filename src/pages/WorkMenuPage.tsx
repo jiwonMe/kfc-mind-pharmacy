@@ -59,7 +59,7 @@ const WorkMenuPage: React.FC = () => {
             sx={{
               fontSize: 14,
               color: '#000000',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             하단 메뉴에서 필요한 메뉴를 선택하세요
@@ -94,7 +94,7 @@ const WorkMenuPage: React.FC = () => {
                   fontSize: 16,
                   fontWeight: 500,
                   color: selectedMenu === item.id ? '#FFFFFF' : '#000000',
-                  fontFamily: '"Wanted Sans", sans-serif',
+                  fontFamily: '"Wanted Sans Variable", sans-serif',
                 }}
               >
                 {item.title}

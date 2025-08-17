@@ -61,7 +61,7 @@ const DiagnosisLinksPage: React.FC = () => {
             sx={{
               fontSize: 14,
               color: '#000000',
-              fontFamily: '"Wanted Sans", sans-serif',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
             하단에서 자가진단을 진행해보세요
@@ -96,7 +96,7 @@ const DiagnosisLinksPage: React.FC = () => {
                   fontSize: 16,
                   fontWeight: 500,
                   color: selectedLink === link.id ? '#FFFFFF' : '#000000',
-                  fontFamily: '"Wanted Sans", sans-serif',
+                  fontFamily: '"Wanted Sans Variable", sans-serif',
                 }}
               >
                 {link.title}
@@ -112,7 +112,7 @@ const DiagnosisLinksPage: React.FC = () => {
             color: '#898989',
             textAlign: 'center',
             marginTop: '24px',
-            fontFamily: '"Wanted Sans", sans-serif',
+            fontFamily: '"Wanted Sans Variable", sans-serif',
           }}
         >
           외부 자가진단 링크로 이동합니다

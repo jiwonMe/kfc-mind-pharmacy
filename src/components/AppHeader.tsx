@@ -33,7 +33,7 @@ const AppHeader: React.FC = () => {
           fontSize: 12,
           fontWeight: 'bold',
           color: '#E2292D',
-          fontFamily: '"Elice DX Neolli OTF", "Wanted Sans", sans-serif',
+          fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
           letterSpacing: '-0.24px',
         }}
       >

@@ -1,5 +1,8 @@
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+@import url('https://font.elice.io/css?family=Elice+DX+Neolli');
+
 :root {
-  font-family: "Wanted Sans", "Noto Sans KR", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Wanted Sans Variable", "Noto Sans KR", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
