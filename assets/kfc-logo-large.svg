@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector">
+<path d="M24 0V8L16 8C16 3.58172 19.5817 -5.31105e-07 24 0Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M24 0C28.4183 5.31105e-07 32 3.58172 32 8V16L24 16V0Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M40 24L32 24L32 16C36.4183 16 40 19.5817 40 24Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M40 24C40 28.4183 36.4183 32 32 32H24L24 24L40 24Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M16 40L16 32H24C24 36.4183 20.4183 40 16 40Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M16 40C11.5817 40 8 36.4183 8 32L8 24L16 24L16 40Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M0 16H8L8 24C3.58173 24 -3.37976e-07 20.4183 0 16Z" fill="var(--fill-0, #E2292D)"/>
+<path d="M0 16C3.37976e-07 11.5817 3.58172 8 8 8L16 8L16 16L0 16Z" fill="var(--fill-0, #E2292D)"/>
+</g>
+</svg>
