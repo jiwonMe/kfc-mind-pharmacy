@@ -315,7 +315,7 @@ export const LetterCard: React.FC<LetterCardProps> = ({
               />
             )}
             
-            <Typography
+            {/* <Typography
               sx={{
                 fontFamily: '"Hakgyoansim Nadeuri OTF", "Noto Sans KR", cursive, sans-serif',
                 fontSize: typeof fontSize === 'number' ? `${fontSize}px` : fontSize,
@@ -330,7 +330,7 @@ export const LetterCard: React.FC<LetterCardProps> = ({
               }}
             >
               당신의 응원 요정 {sender} 올림
-            </Typography>
+            </Typography> */}
           </>
         )}
       </Box>
