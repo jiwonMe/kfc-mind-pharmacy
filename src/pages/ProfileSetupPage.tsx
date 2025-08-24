@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import RefreshIcon from '@mui/icons-material/Refresh';
+import InputAdornment from '@mui/material/InputAdornment';
 import AppHeader from '../components/AppHeader';
 import HeroBanner from '../components/HeroBanner';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -17,10 +19,31 @@ const profileIcons = [
   { id: 4, src: '/assets/characters/buddy.png', name: '버디' },
 ];
 
+// 랜덤 닉네임 생성을 위한 형용사와 음식 배열
+const adjectives = [
+  '바삭한', '달콤한', '매콤한', '고소한', '부드러운',
+  '상큼한', '짭짤한', '따뜻한', '시원한', '쫄깃한',
+  '폭신한', '촉촉한', '아삭한', '담백한', '진한',
+  '깔끔한', '든든한', '푸짐한', '신선한', '황금빛'
+];
+
+const foods = [
+  '치킨', '비스킷', '버거', '감자튀김', '콜라',
+  '팝콘', '와플', '도넛', '샐러드', '스프',
+  '파이', '쿠키', '브라우니', '아이스크림', '커피',
+  '샌드위치', '너겟', '토스트', '머핀', '스무디'
+];
+
+const generateRandomName = () => {
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const randomFood = foods[Math.floor(Math.random() * foods.length)];
+  return `${randomAdjective} ${randomFood}`;
+};
+
 const ProfileSetupPage: React.FC = () => {
   const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [profileName, setProfileName] = useState('');
+  const [profileName, setProfileName] = useState(() => generateRandomName());
   const [selectedIcon, setSelectedIcon] = useState<number | string | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
 
@@ -79,7 +102,36 @@ const ProfileSetupPage: React.FC = () => {
             value={profileName}
             onChange={(e) => setProfileName(e.target.value)}
             fullWidth
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => setProfileName(generateRandomName())}
+                    edge="end"
+                    sx={{
+                      color: '#E2292D',
+                      '&:hover': {
+                        backgroundColor: 'rgba(226, 41, 45, 0.08)',
+                      },
+                    }}
+                    title="랜덤 이름 생성"
+                  >
+                    <RefreshIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
           />
+          <Typography
+            sx={{
+              fontSize: 12,
+              color: '#898989',
+              marginTop: '4px',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
+            }}
+          >
+            새로고침 버튼을 눌러 다른 이름을 추천받을 수 있습니다
+          </Typography>
         </Box>
 
         {/* 프로필 아이콘 선택 */}
