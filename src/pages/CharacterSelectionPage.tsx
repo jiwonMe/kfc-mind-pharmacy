@@ -13,7 +13,7 @@ const characters = [
     id: 'sanders',
     name: '닥터 샌더스',
     englishName: 'Dr. Sanders',
-    role: '든든한 상담 전문가',
+    role: '심리상담 AI 챗봇',
     description: 'AI 챗봇 상담사로 당신의 마음을 들어드립니다',
     image: '/assets/characters/doctor-sanders.png',
     route: '/chat/sanders',
@@ -22,7 +22,7 @@ const characters = [
     id: 'gravy',
     name: '널스 그레이비',
     englishName: 'Nurse Gravy',
-    role: '마음 건강 간호사',
+    role: '자가진단',
     description: '심리 자가진단 도구를 제공합니다',
     image: '/assets/characters/nurse-gravy.png',
     route: '/links/gravy',
@@ -31,7 +31,7 @@ const characters = [
     id: 'winky',
     name: '윙키',
     englishName: 'Winky',
-    role: '활기 넘치는 응원 요정',
+    role: '응원받기',
     description: '따뜻한 응원 메시지를 전달합니다',
     image: '/assets/characters/winky.png',
     route: '/letter/winky',
@@ -40,7 +40,7 @@ const characters = [
     id: 'buddy',
     name: '버디',
     englishName: 'Buddy',
-    role: '든든한 업무 파트너',
+    role: '업무 메뉴얼 확인',
     description: '업무 관련 도구와 자료를 제공합니다',
     image: '/assets/characters/buddy.png',
     route: '/work/buddy',
@@ -63,8 +63,8 @@ const CharacterSelectionPage: React.FC = () => {
       <Box sx={{ minHeight: '100vh', backgroundColor: '#FFFFFF' }}>
         <AppHeader />
         <HeroBanner 
-          title="대화 상대 선택" 
-          subtitle="상담을 진행할 상대를 선택해주세요"
+          title="안녕하세요, \nMind Pharmacy입니다" 
+          subtitle="원하시는 처방을 선택해주세요"
         />
         
         <Box

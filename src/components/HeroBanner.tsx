@@ -40,21 +40,27 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     >
       <Typography
         sx={{
-          fontSize: 20,
+          fontSize: title.includes('Mind Pharmacy') ? 24 : 20,
           fontWeight: 'bold',
           color: textColor,
           fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
           letterSpacing: '-0.4px',
-          lineHeight: 1,
+          lineHeight: 1.2,
           zIndex: 2,
+          whiteSpace: 'pre-line',
         }}
       >
-        {title}
+        {title.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            {index < title.split('\n').length - 1 && <br />}
+          </React.Fragment>
+        ))}
       </Typography>
       {subtitle && (
         <Typography
           sx={{
-            fontSize: 14,
+            fontSize: title.includes('Mind Pharmacy') ? 12 : 14,
             fontWeight: 500,
             color: textColor,
             fontFamily: '"Wanted Sans Variable", sans-serif',
@@ -62,6 +68,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             lineHeight: 1,
             marginTop: '4px',
             zIndex: 2,
+            opacity: title.includes('Mind Pharmacy') ? 0.9 : 1,
           }}
         >
           {subtitle}
