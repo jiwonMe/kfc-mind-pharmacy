@@ -170,7 +170,7 @@ export const LetterCard: React.FC<LetterCardProps> = ({
           >
             <Typography
               sx={{
-                fontFamily: '"Hakgyoansim Nadeuri OTF", "Noto Sans KR", cursive, sans-serif',
+                fontFamily: '"HakgyoansimNadeuriTTF-B", "Noto Sans KR", cursive, sans-serif',
                 fontSize: typeof fontSize === 'number' ? `${fontSize}px` : fontSize,
                 letterSpacing: '-0.48px',
                 color: textColor,
@@ -317,7 +317,7 @@ export const LetterCard: React.FC<LetterCardProps> = ({
             
             {/* <Typography
               sx={{
-                fontFamily: '"Hakgyoansim Nadeuri OTF", "Noto Sans KR", cursive, sans-serif',
+                fontFamily: '"HakgyoansimNadeuriTTF-B", "Noto Sans KR", cursive, sans-serif',
                 fontSize: typeof fontSize === 'number' ? `${fontSize}px` : fontSize,
                 color: textColor,
                 textAlign: 'center',

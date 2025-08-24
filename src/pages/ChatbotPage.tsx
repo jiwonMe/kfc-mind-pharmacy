@@ -61,7 +61,7 @@ const ChatbotPage: React.FC = () => {
     setIsTyping(true);
     setTimeout(() => {
       // Sequential responses based on message count
-      const responseIndex = Math.floor((messages.filter(m => m.sender === 'user').length - 1) % 4);
+      const responseIndex = Math.floor((messages.filter(m => m.sender === 'user').length) % 3);
       
       let aiMessage: Message;
       

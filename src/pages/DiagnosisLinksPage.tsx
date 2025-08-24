@@ -8,13 +8,12 @@ import CharacterProfileCard from '../components/CharacterProfileCard';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const diagnosisLinks = [
-  { id: 1, title: '우울증 자가 진단', url: 'https://example.com/phq9' },
-  { id: 2, title: '스트레스 자가 진단', url: 'https://example.com/pss' },
-  { id: 3, title: '불안증 자가 진단', url: 'https://example.com/gad7' },
-  { id: 4, title: '번아웃 자가 진단', url: 'https://example.com/mbi' },
-  { id: 5, title: '강박증 자가 진단', url: 'https://example.com/ybocs' },
-  { id: 6, title: 'ADHD 자가 진단', url: 'https://example.com/asrs' },
-  { id: 7, title: '조울증 자가 진단', url: 'https://example.com/mdq' },
+  { id: 1, title: '번아웃 자가진단', url: 'https://www.maum-sopoong.or.kr/burnout-syndrome-self-diagnosis-test' },
+  { id: 2, title: '스트레스 자가진단', url: 'https://www.maum-sopoong.or.kr/stress-self-diagnosis-test' },
+  { id: 3, title: '무기력증 자가진단', url: 'https://www.maum-sopoong.or.kr/lethargy-self-diagnosis-test' },
+  { id: 4, title: '성인 ADHD 자가진단', url: 'https://www.maum-sopoong.or.kr/adult-adhd-self-diagnosis-test' },
+  { id: 5, title: '고독감 자가진단', url: 'https://www.maum-sopoong.or.kr/feeling-of-loneliness-self-diagnosis-test' },
+  { id: 6, title: '자존감 자가진단', url: 'https://www.maum-sopoong.or.kr/self-esteem-self-diagnosis-test' },
 ];
 
 const DiagnosisLinksPage: React.FC = () => {
@@ -35,11 +34,13 @@ const DiagnosisLinksPage: React.FC = () => {
     <ResponsiveContainer>
       <Box sx={{ minHeight: '100vh', backgroundColor: '#FFFFFF' }}>
         <AppHeader />
-        <CharacterProfileCard
-          name="널스 그레이비"
-          role="마음 건강 간호사"
-          image="/assets/characters/nurse-gravy.png"
-        />
+        <Box sx={{ padding: '0 16px' }}>
+          <CharacterProfileCard
+            name="널스 그레이비"
+            role="언제나 열려있는 마음 진단 간호사입니다"
+            image="/assets/characters/nurse-gravy.png"
+          />
+        </Box>
       
         <Box sx={{ padding: '16px' }}>
           {/* 안내 박스 */}
@@ -56,7 +57,7 @@ const DiagnosisLinksPage: React.FC = () => {
               margin: '0 auto 24px',
             }}
           >
-          <InfoIcon sx={{ color: '#898989', fontSize: 24 }} />
+          <Typography sx={{ fontSize: 20 }}>🩹</Typography>
           <Typography
             sx={{
               fontSize: 14,
@@ -64,7 +65,7 @@ const DiagnosisLinksPage: React.FC = () => {
               fontFamily: '"Wanted Sans Variable", sans-serif',
             }}
           >
-            하단에서 자가진단을 진행해보세요
+            원하시는 자가진단을 진행해보세요
           </Typography>
         </Box>
 
