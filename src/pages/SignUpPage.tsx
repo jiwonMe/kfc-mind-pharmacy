@@ -10,6 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import ListSubheader from '@mui/material/ListSubheader';
+import Divider from '@mui/material/Divider';
 import AppHeader from '../components/AppHeader';
 import HeroBanner from '../components/HeroBanner';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -175,10 +177,47 @@ const SignUpPage: React.FC = () => {
             <MenuItem value="" disabled>
               직급을 선택해주세요
             </MenuItem>
-            <MenuItem value="manager">점장</MenuItem>
-            <MenuItem value="assistant">부점장</MenuItem>
-            <MenuItem value="shift">매니저</MenuItem>
-            <MenuItem value="crew">크루</MenuItem>
+            
+            {/* 현장직 카테고리 */}
+            <ListSubheader 
+              sx={{ 
+                backgroundColor: '#F5F5F5',
+                color: '#E2292D',
+                fontWeight: 600,
+                fontSize: 14,
+                fontFamily: '"Wanted Sans Variable", sans-serif',
+                lineHeight: '36px',
+              }}
+            >
+              현장직
+            </ListSubheader>
+            <MenuItem value="store-manager" sx={{ pl: 4 }}>점장</MenuItem>
+            <MenuItem value="assistant-manager" sx={{ pl: 4 }}>부점장</MenuItem>
+            <MenuItem value="shift-manager" sx={{ pl: 4 }}>매니저</MenuItem>
+            <MenuItem value="part-timer" sx={{ pl: 4 }}>파트타이머</MenuItem>
+            
+            <Divider sx={{ my: 1 }} />
+            
+            {/* 본사직 카테고리 */}
+            <ListSubheader 
+              sx={{ 
+                backgroundColor: '#F5F5F5',
+                color: '#E2292D',
+                fontWeight: 600,
+                fontSize: 14,
+                fontFamily: '"Wanted Sans Variable", sans-serif',
+                lineHeight: '36px',
+              }}
+            >
+              본사직
+            </ListSubheader>
+            <MenuItem value="planning-strategy" sx={{ pl: 4 }}>기획/전략/경영</MenuItem>
+            <MenuItem value="marketing-pr" sx={{ pl: 4 }}>마케팅/광고/홍보</MenuItem>
+            <MenuItem value="customer-service" sx={{ pl: 4 }}>고객서비스 (CS)</MenuItem>
+            <MenuItem value="ehs" sx={{ pl: 4 }}>EHS (환경·보건·안전)</MenuItem>
+            <MenuItem value="legal-finance" sx={{ pl: 4 }}>가맹법무/재무/회계</MenuItem>
+            <MenuItem value="facility-management" sx={{ pl: 4 }}>시설/보건/안전 관리</MenuItem>
+            <MenuItem value="hr-store-support" sx={{ pl: 4 }}>인사/매장지원</MenuItem>
           </Select>
         </Box>
 
