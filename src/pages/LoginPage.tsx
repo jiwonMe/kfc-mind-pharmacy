@@ -6,6 +6,10 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import { KFCButton } from '../components/KFCButton';
 import { KFCTextField } from '../components/KFCTextField';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -18,11 +22,21 @@ const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleLogin = () => {
     // TODO: API 연동
     console.log('Login:', { username, password, rememberMe });
     navigate('/characters');
+  };
+
+  const handleSocialLogin = (provider: string) => {
+    setAlertMessage(`${provider} 로그인은 준비 중입니다.`);
+    setShowAlert(true);
+    setTimeout(() => {
+      navigate('/characters');
+    }, 1500);
   };
 
   return (
@@ -138,6 +152,121 @@ const LoginPage: React.FC = () => {
           로그인
         </KFCButton>
 
+        {/* Divider with text */}
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', my: 3 }}>
+          <Divider sx={{ flex: 1 }} />
+          <Typography
+            sx={{
+              mx: 2,
+              fontSize: { xs: '12px', sm: '13px', md: '14px' },
+              color: '#898989',
+              fontFamily: '"Wanted Sans Variable", sans-serif',
+            }}
+          >
+            간편 로그인
+          </Typography>
+          <Divider sx={{ flex: 1 }} />
+        </Box>
+
+        {/* Social Login Buttons */}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: { xs: '12px', sm: '16px', md: '20px' },
+            mb: 3,
+          }}
+        >
+          <IconButton
+            onClick={() => handleSocialLogin('카카오')}
+            sx={{
+              width: { xs: 48, sm: 52, md: 56 },
+              height: { xs: 48, sm: 52, md: 56 },
+              backgroundColor: '#FEE500',
+              borderRadius: '50%',
+              '&:hover': {
+                backgroundColor: '#FDD835',
+                transform: 'scale(1.05)',
+              },
+              transition: 'all 0.2s ease',
+            }}
+          >
+            <Box
+              component="img"
+              src="/assets/kakao-icon.svg"
+              alt="Kakao"
+              sx={{ width: 24, height: 24 }}
+            />
+          </IconButton>
+          
+          <IconButton
+            onClick={() => handleSocialLogin('네이버')}
+            sx={{
+              width: { xs: 48, sm: 52, md: 56 },
+              height: { xs: 48, sm: 52, md: 56 },
+              backgroundColor: '#03C75A',
+              borderRadius: '50%',
+              '&:hover': {
+                backgroundColor: '#00B050',
+                transform: 'scale(1.05)',
+              },
+              transition: 'all 0.2s ease',
+            }}
+          >
+            <Box
+              component="img"
+              src="/assets/naver-icon.svg"
+              alt="Naver"
+              sx={{ width: 20, height: 20 }}
+            />
+          </IconButton>
+          
+          <IconButton
+            onClick={() => handleSocialLogin('구글')}
+            sx={{
+              width: { xs: 48, sm: 52, md: 56 },
+              height: { xs: 48, sm: 52, md: 56 },
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #DADCE0',
+              borderRadius: '50%',
+              '&:hover': {
+                backgroundColor: '#F8F9FA',
+                transform: 'scale(1.05)',
+              },
+              transition: 'all 0.2s ease',
+            }}
+          >
+            <Box
+              component="img"
+              src="/assets/google-icon.svg"
+              alt="Google"
+              sx={{ width: 24, height: 24 }}
+            />
+          </IconButton>
+          
+          <IconButton
+            onClick={() => handleSocialLogin('애플')}
+            sx={{
+              width: { xs: 48, sm: 52, md: 56 },
+              height: { xs: 48, sm: 52, md: 56 },
+              backgroundColor: '#000000',
+              borderRadius: '50%',
+              '&:hover': {
+                backgroundColor: '#333333',
+                transform: 'scale(1.05)',
+              },
+              transition: 'all 0.2s ease',
+            }}
+          >
+            <Box
+              component="img"
+              src="/assets/apple-icon.svg"
+              alt="Apple"
+              sx={{ width: 24, height: 24, filter: 'invert(1)' }}
+            />
+          </IconButton>
+        </Box>
+
         <Box
           sx={{
             display: 'flex',
@@ -187,6 +316,22 @@ const LoginPage: React.FC = () => {
           </Typography>
         </Box>
       </Box>
+      
+      {/* Alert Snackbar */}
+      <Snackbar
+        open={showAlert}
+        autoHideDuration={1500}
+        onClose={() => setShowAlert(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={() => setShowAlert(false)}
+          severity="info"
+          sx={{ width: '100%' }}
+        >
+          {alertMessage}
+        </Alert>
+      </Snackbar>
       </Box>
     </ResponsiveContainer>
   );
