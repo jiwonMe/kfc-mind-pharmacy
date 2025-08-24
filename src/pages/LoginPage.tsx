@@ -32,11 +32,11 @@ const LoginPage: React.FC = () => {
   };
 
   const handleSocialLogin = (provider: string) => {
-    setAlertMessage(`${provider} 로그인은 준비 중입니다.`);
+    setAlertMessage(`${provider} 계정으로 회원가입을 진행합니다.`);
     setShowAlert(true);
     setTimeout(() => {
-      navigate('/characters');
-    }, 1500);
+      navigate('/signup');
+    }, 1000);
   };
 
   return (
@@ -320,13 +320,13 @@ const LoginPage: React.FC = () => {
       {/* Alert Snackbar */}
       <Snackbar
         open={showAlert}
-        autoHideDuration={1500}
+        autoHideDuration={1000}
         onClose={() => setShowAlert(false)}
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
         <Alert
           onClose={() => setShowAlert(false)}
-          severity="info"
+          severity="success"
           sx={{ width: '100%' }}
         >
           {alertMessage}
