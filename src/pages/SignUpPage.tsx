@@ -27,7 +27,6 @@ const SignUpPage: React.FC = () => {
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   const handleSignUp = () => {
     // TODO: API 연동
     console.log('SignUp:', { username, password, position, agreeToTerms });

@@ -24,7 +24,6 @@ const LoginPage: React.FC = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-
   const handleLogin = () => {
     // TODO: API 연동
     console.log('Login:', { username, password, rememberMe });

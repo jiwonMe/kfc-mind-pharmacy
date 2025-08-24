@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -8,6 +8,7 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import { CharacterCard } from '../components/CharacterCard';
 import { KFCButton } from '../components/KFCButton';
 import useStore from '../store/useStore';
+import WelcomeDrawer from '../components/WelcomeDrawer';
 
 const characters = [
   {
@@ -53,6 +54,16 @@ const CharacterSelectionPage: React.FC = () => {
   const user = useStore((state) => state.user);
   const profileName = user?.profileName || '고객';
   const [selectedCharacter, setSelectedCharacter] = useState<string | null>(null);
+  const [showWelcomeDrawer, setShowWelcomeDrawer] = useState(false);
+
+  // Show drawer when component mounts (user just logged in/signed up)
+  useEffect(() => {
+    // Check if user just arrived from login/signup (you could use a flag in store)
+    const timer = setTimeout(() => {
+      setShowWelcomeDrawer(true);
+    }, 500); // Small delay for better UX
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleStart = () => {
     const character = characters.find(c => c.id === selectedCharacter);
@@ -106,6 +117,12 @@ const CharacterSelectionPage: React.FC = () => {
             </KFCButton>
           </Box>
         </Box>
+        
+        {/* Welcome Drawer */}
+        <WelcomeDrawer 
+          open={showWelcomeDrawer} 
+          onClose={() => setShowWelcomeDrawer(false)} 
+        />
       </Box>
     </ResponsiveContainer>
   );

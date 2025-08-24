@@ -61,6 +61,7 @@ const CharacterProfileCard: React.FC<CharacterProfileCardProps> = ({
           top: -1,
           width: 106,
           height: 106,
+          objectFit: 'contain',
         }}
       />
     </Box>
