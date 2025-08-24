@@ -125,7 +125,13 @@ const ProfileSetupPage: React.FC = () => {
           >
             {/* Upload button */}
             <Box
-              onClick={handleUploadClick}
+              onClick={() => {
+                if (uploadedImage) {
+                  setSelectedIcon('uploaded');
+                } else {
+                  handleUploadClick();
+                }
+              }}
               sx={{
                 position: 'relative',
                 width: '100%',
@@ -140,22 +146,53 @@ const ProfileSetupPage: React.FC = () => {
                 transition: 'all 0.2s ease',
                 '&:hover': {
                   transform: 'scale(1.05)',
-                  backgroundColor: '#F5F5F5',
+                  backgroundColor: uploadedImage ? '#FFFFFF' : '#F5F5F5',
                 },
               }}
             >
               {uploadedImage ? (
                 <Box
-                  component="img"
-                  src={uploadedImage}
-                  alt="Uploaded profile"
                   sx={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '13px',
+                    position: 'relative',
                   }}
-                />
+                >
+                  <Box
+                    component="img"
+                    src={uploadedImage}
+                    alt="Uploaded profile"
+                    sx={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      borderRadius: '13px',
+                    }}
+                  />
+                  <Box
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleUploadClick();
+                    }}
+                    sx={{
+                      position: 'absolute',
+                      bottom: 4,
+                      right: 4,
+                      width: 28,
+                      height: 28,
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      '&:hover': {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                      },
+                    }}
+                  >
+                    <AddPhotoAlternateIcon sx={{ fontSize: 16, color: 'white' }} />
+                  </Box>
+                </Box>
               ) : (
                 <Box
                   sx={{
@@ -206,7 +243,7 @@ const ProfileSetupPage: React.FC = () => {
             <Box
               onClick={() => {
                 setSelectedIcon('default');
-                setUploadedImage(null);
+                // Don't clear uploadedImage when selecting default
               }}
               sx={{
                 position: 'relative',
@@ -261,7 +298,7 @@ const ProfileSetupPage: React.FC = () => {
                 key={icon.id}
                 onClick={() => {
                   setSelectedIcon(icon.id);
-                  setUploadedImage(null);
+                  // Don't clear uploadedImage when selecting other icons
                 }}
                 sx={{
                   position: 'relative',
@@ -324,7 +361,7 @@ const ProfileSetupPage: React.FC = () => {
                 key={icon.id}
                 onClick={() => {
                   setSelectedIcon(icon.id);
-                  setUploadedImage(null);
+                  // Don't clear uploadedImage when selecting other icons
                 }}
                 sx={{
                   position: 'relative',
