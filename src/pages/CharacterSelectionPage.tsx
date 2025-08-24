@@ -7,6 +7,7 @@ import HeroBanner from '../components/HeroBanner';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { CharacterCard } from '../components/CharacterCard';
 import { KFCButton } from '../components/KFCButton';
+import useStore from '../store/useStore';
 
 const characters = [
   {
@@ -49,6 +50,8 @@ const characters = [
 
 const CharacterSelectionPage: React.FC = () => {
   const navigate = useNavigate();
+  const user = useStore((state) => state.user);
+  const profileName = user?.profileName || '고객';
   const [selectedCharacter, setSelectedCharacter] = useState<string | null>(null);
 
   const handleStart = () => {
@@ -63,7 +66,7 @@ const CharacterSelectionPage: React.FC = () => {
       <Box sx={{ minHeight: '100vh', backgroundColor: '#FFFFFF' }}>
         <AppHeader />
         <HeroBanner 
-          title="안녕하세요, <br>Mind Pharmacy입니다" 
+          title={`안녕하세요, ${profileName}님`}
           subtitle="원하시는 처방을 선택해주세요"
         />
         

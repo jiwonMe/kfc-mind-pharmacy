@@ -40,7 +40,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     >
       <Typography
         sx={{
-          fontSize: title.includes('Mind Pharmacy') ? 24 : 20,
+          fontSize: title.includes('님') ? 24 : 20,
           fontWeight: 'bold',
           color: textColor,
           fontFamily: '"Elice DX Neolli", "Wanted Sans Variable", sans-serif',
@@ -60,7 +60,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       {subtitle && (
         <Typography
           sx={{
-            fontSize: title.includes('Mind Pharmacy') ? 12 : 14,
+            fontSize: title.includes('님') ? 12 : 14,
             fontWeight: 500,
             color: textColor,
             fontFamily: '"Wanted Sans Variable", sans-serif',
@@ -68,7 +68,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             lineHeight: 1,
             marginTop: '4px',
             zIndex: 2,
-            opacity: title.includes('Mind Pharmacy') ? 0.9 : 1,
+            opacity: title.includes('님') ? 0.9 : 1,
           }}
         >
           {subtitle}

@@ -5,7 +5,7 @@ interface User {
   username: string;
   position?: string;
   profileName?: string;
-  profileIcon?: number;
+  profileIcon?: number | string;
 }
 
 interface AuthContextType {
@@ -14,7 +14,7 @@ interface AuthContextType {
   login: (username: string, password: string) => Promise<void>;
   signup: (username: string, password: string, position: string) => Promise<void>;
   logout: () => void;
-  updateProfile: (profileName: string, profileIcon: number) => void;
+  updateProfile: (profileName: string, profileIcon: number | string) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -66,7 +66,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     localStorage.removeItem('user');
   };
 
-  const updateProfile = (profileName: string, profileIcon: number) => {
+  const updateProfile = (profileName: string, profileIcon: number | string) => {
     if (user) {
       const updatedUser = { ...user, profileName, profileIcon };
       setUser(updatedUser);

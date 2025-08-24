@@ -11,6 +11,7 @@ import HeroBanner from '../components/HeroBanner';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { KFCButton } from '../components/KFCButton';
 import { KFCTextField } from '../components/KFCTextField';
+import useStore from '../store/useStore';
 
 const profileIcons = [
   { id: 1, src: '/assets/characters/doctor-sanders.png', name: '닥터 샌더스' },
@@ -43,13 +44,15 @@ const generateRandomName = () => {
 const ProfileSetupPage: React.FC = () => {
   const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const updateProfile = useStore((state) => state.updateProfile);
   const [profileName, setProfileName] = useState(() => generateRandomName());
   const [selectedIcon, setSelectedIcon] = useState<number | string | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
 
   const handleCreateProfile = () => {
-    // TODO: API 연동
-    console.log('Profile:', { profileName, selectedIcon, uploadedImage });
+    // Save profile to zustand store
+    updateProfile(profileName, selectedIcon || 'default', uploadedImage || undefined);
+    console.log('Profile saved:', { profileName, selectedIcon, uploadedImage });
     navigate('/characters');
   };
 
