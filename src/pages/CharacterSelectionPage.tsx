@@ -63,7 +63,7 @@ const CharacterSelectionPage: React.FC = () => {
       <Box sx={{ minHeight: '100vh', backgroundColor: '#FFFFFF' }}>
         <AppHeader />
         <HeroBanner 
-          title="안녕하세요, \nMind Pharmacy입니다" 
+          title="안녕하세요, <br>Mind Pharmacy입니다" 
           subtitle="원하시는 처방을 선택해주세요"
         />
         

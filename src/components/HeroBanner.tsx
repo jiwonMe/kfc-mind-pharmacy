@@ -50,10 +50,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           whiteSpace: 'pre-line',
         }}
       >
-        {title.split('\n').map((line, index) => (
+        {title.split('<br>').map((line, index) => (
           <React.Fragment key={index}>
             {line}
-            {index < title.split('\n').length - 1 && <br />}
+            {index < title.split('<br>').length - 1 && <br />}
           </React.Fragment>
         ))}
       </Typography>
